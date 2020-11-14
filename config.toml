@@ -70,6 +70,12 @@ enableRobotsTXT = true
   parent = "Music Gear"
 
   [[menu.main]]
+  name = "Best DAW Software"
+  URL = "music-gear/best-daw-software"
+  weight = 1
+  parent = "Best DAW Software"
+
+  [[menu.main]]
   name = "Kids Onesies"
   URL = "/kids-onesies/"
   weight = 1
