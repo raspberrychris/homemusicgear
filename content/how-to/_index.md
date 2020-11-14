@@ -7,7 +7,7 @@ canonicalUrl: "/how-to"
 # meta description
 description: this is meta description
 # type
-type: "list"
+type: "post"
 menu: "main"
 ---
 
