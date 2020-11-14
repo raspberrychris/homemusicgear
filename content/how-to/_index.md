@@ -8,7 +8,7 @@ canonicalUrl: "/how-to"
 description: this is meta description
 # type
 type : about
-
+menu: "main"
 ---
 
 ## Slumber Hut® Grey Star Girls
