@@ -65,7 +65,7 @@ enableRobotsTXT = true
 
   [[menu.main]]
   name = "Best Mics"
-  URL = "best-mics"
+  URL = "music-gear/best-mics"
   weight = 1
   parent = "music-gear"
 
