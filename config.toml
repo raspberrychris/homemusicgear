@@ -67,7 +67,7 @@ enableRobotsTXT = true
   name = "Best Mics"
   URL = "music-gear/best-mics"
   weight = 1
-  parent = "music-gear"
+  parent = "Music Gear"
 
   [[menu.main]]
   name = "Kids Onesies"
