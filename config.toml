@@ -76,6 +76,12 @@ enableRobotsTXT = true
   parent = "Music Gear"
 
   [[menu.main]]
+  name = "Best Midi Pad Controllers"
+  URL = "music-gear/best-midi-pad-controllers"
+  weight = 1
+  parent = "Music Gear"
+
+  [[menu.main]]
   name = "Kids Onesies"
   URL = "/kids-onesies/"
   weight = 1
