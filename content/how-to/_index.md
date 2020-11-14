@@ -1,8 +1,8 @@
 ---
-title: Kids Onesies
+title: How to
 date: 2019-10-29T13:49:23+06:00
 draft: false
-canonicalUrl: "/kids-onesies"
+canonicalUrl: "/how-to"
 # image
 # meta description
 description: this is meta description
