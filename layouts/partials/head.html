@@ -1,0 +1,84 @@
+<head>
+  <meta charset="utf-8">
+  <title itemprop="name">{{ .Title }} | {{ .Site.Title }}</title>
+  <meta property="og:title" content="{{ .Title }} | {{ .Site.Title }}" />
+  <meta name="twitter:title" content="{{ .Title }} | {{ .Site.Title }}" />
+  <meta itemprop="name" content="{{ .Title }} | {{ .Site.Title }}" />
+  <meta name="application-name" content="{{ .Title }} | {{ .Site.Title }}" />
+  <meta property="og:site_name" content="{{ .Site.Params.sitename }}" />
+
+  <!-- Description Meta -->
+  <meta name="description" content="{{ .Params.description }}" />
+  <meta itemprop="description" content="{{ .Params.description }}" />
+  <meta property="og:description" content="{{ .Params.description }}" />
+  <meta name="twitter:description" content="{{ .Params.description }}" />
+
+  <!-- Image Tags -->
+  {{ with .Params.image }}
+    <meta itemprop="image" content="{{ . | absURL }}" />
+    <meta property="og:image" content="{{ . | absURL }}" />
+    <meta name="twitter:image" content="{{ . | absURL }}" />
+    <meta name="twitter:image:src" content="{{ . | absURL }}" />
+  {{ else }}
+    <meta itemprop="image" content="{{ .Site.Params.ogimage | absURL }}" />
+    <meta property="og:image" content="{{ .Site.Params.ogimage | absURL }}" />
+    <meta name="twitter:image" content="{{ .Site.Params.ogimage | absURL }}" />
+    <meta name="twitter:image:src" content="{{ .Site.Params.ogimage | absURL }}" />
+  {{ end }}
+
+  <!-- noindex - can set through the front matter -->
+  {{ if .Params.noindex }}
+<meta name="robots" content="noindex" />
+{{ end }}
+
+  <!-- Sitemap and rss -->
+  <link rel="sitemap" type="application/xml" title="Sitemap" href='{{ "sitemap.xml" | absURL }}' />
+
+{{ with .OutputFormats.Get "RSS" }}
+  <link href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" title="{{ $.Site.Title }}" />
+  <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $.Site.Title }}" />
+{{ end }}
+
+<!-- Favicon tags -->
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="icon" type="image/x-icon" sizes="16x16 32x32" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="152x152" href="/favicons/favicon-152-precomposed.png" />
+<link rel="apple-touch-icon" sizes="144x144" href="/favicons/favicon-144-precomposed.png" />
+<link rel="apple-touch-icon" sizes="120x120" href="/favicons/favicon-120-precomposed.png" />
+<link rel="apple-touch-icon" sizes="114x114" href="/favicons/favicon-114-precomposed.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="/favicons/favicon-180-precomposed.png" />
+<link rel="apple-touch-icon" sizes="72x72" href="/favicons/favicon-72-precomposed.png" />
+<link rel="apple-touch-icon" href="/favicons/favicon-57.png" />
+<link rel="icon" href="/favicons/favicon-32.png" sizes="32x32" />
+<link rel="icon" sizes="192x192" href="/favicons/favicon-192.png" />
+
+  {{ "<!-- mobile responsive meta -->" | safeHTML }}
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ with .Site.Params.description }}{{ . }}{{ end }}{{ end }}">
+  {{ with .Site.Params.author }}<meta name="author" content="{{ . }}">{{ end }}
+  {{ hugo.Generator }}
+
+  {{ "<!-- plugins -->" | safeHTML }}
+  {{ range .Site.Params.plugins.css }}
+  <link rel="stylesheet" href="{{ .URL | absURL }} ">
+  {{ end }}
+
+  {{ "<!-- Main Stylesheet -->" | safeHTML }}
+  {{ $styles := resources.Get "scss/style.scss" | toCSS | minify }}
+  <link rel="stylesheet" href="{{ $styles.Permalink }}" media="screen">
+
+  {{ "<!--Favicon-->" | safeHTML }}
+  <link rel="shortcut icon" href="{{ `images/favicon.png` | absURL }} " type="image/x-icon">
+  <link rel="icon" href="{{ `images/favicon.png` | absURL }} " type="image/x-icon">
+
+  {{ if .Params.canonicalUrl }}
+  <link rel="canonical" href="{{ .Params.canonicalUrl }}">
+  {{ else }}
+  <link rel="canonical" href="{{ .Permalink }}">
+  {{ end }}
+
+
+
+</head>

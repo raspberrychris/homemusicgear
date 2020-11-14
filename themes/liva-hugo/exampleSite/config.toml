@@ -1,11 +1,12 @@
-baseURL = "/"
+######################## default configuration ####################
+baseURL = "https://examplesite.com"
 languageCode = "en-us"
-title = "Home Music Gear"
+title = "Liva | Personal blog template"
 theme = "liva-hugo"
 summaryLength = "10"
-paginate = 20
+paginate = 6
 disqusShortname = ""
-enableRobotsTXT = true
+
 [outputs]
   home = ["HTML", "RSS", "JSON"]
 
@@ -46,70 +47,17 @@ enableRobotsTXT = true
   [[menu.main]]
   name = "About"
   URL = "about"
-  weight = 4
+  weight = 6
 
   [[menu.main]]
-  name = "Blog"
+  name = "Post"
   URL = "blog"
   weight = 2
 
   [[menu.main]]
   name = "Contact"
   URL = "contact"
-  weight = 3
-
-  [[menu.main]]
-  name = "Onesies"
-  URL = "onesies"
   weight = 1
-
-  [[menu.main]]
-  name = "All Onesies"
-  URL = "all-onesies"
-  weight = 1
-  parent = "Onesies"
-
-  [[menu.main]]
-  name = "Kids Onesies"
-  URL = "/kids-onesies/"
-  weight = 1
-  parent = "Onesies"
-
-  [[menu.main]]
-  name = "Adult Onesies"
-  URL = "adult-onesies"
-  weight = 1
-  parent = "Onesies"
-
-  [[menu.main]]
-  name = "Character Onesies"
-  URL = "character-onesies"
-  weight = 1
-  parent = "Onesies"
-
-  [[menu.main]]
-  name = "Animal Onesies"
-  URL = "animal-onesies"
-  weight = 1
-  parent = "Onesies"
-
-  [[menu.main]]
-  name = "Cosplay"
-  URL = "cosplay"
-  weight = 1
-  parent = "Onesies"
-
-  [[menu.main]]
-  name = "Emoji"
-  URL = "emoji"
-  weight = 1
-  parent = "Onesies"
-
-  [[menu.main]]
-  name = "Onepiece"
-  URL = "onepiece"
-  weight = 1
-  parent = "Onesies"
 
   # footer menu
   [[menu.footer]]
@@ -118,7 +66,7 @@ enableRobotsTXT = true
   weight = 1
 
   [[menu.footer]]
-  name = "Blog"
+  name = "Post"
   URL = "blog"
   weight = 2
 
@@ -126,29 +74,28 @@ enableRobotsTXT = true
   name = "Contact"
   URL = "contact"
   weight = 3
-  parent = "About"
 
 
 #################### default parameters ################################
 [params]
-logo = "https://funsieonesie.co.uk/wp-content/uploads/2020/05/funsie-onesie-logo3-removebg-preview.png"
+logo = "images/logo.png"
 home = "Home"
 # Meta data
 description = "This is meta description"
-author = "Home Music Gear"
+author = "Themefisher"
 # Google Analitycs
 googleAnalitycsID = "Your ID"
 # Contact Information
-mobile = "Home Music Gear is a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for sites to earn advertising fees by advertising and linking to Amazon.co.uk."
-email = ""
-location = ""
+mobile = "0124857985320"
+email = "demo@email.com"
+location = "Dhaka, Bangladedsh"
 # copyright
-copyright = "| copyright &copy; 2020 [Funsie Onesie](/) All Rights Reserved |"
+copyright = "| copyright &copy; 2020 [Themefisher](https://themefisher.com) All Rights Reserved |"
 
   # Preloader
   [params.preloader]
   enable = true
-  preloader = "https://static-steelkiwi-dev.s3.amazonaws.com/media/filer_public/2b/3b/2b3b2d3a-437b-4e0a-99cc-d837b5177baf/7d707b62-bb0c-4828-8376-59c624b2937b.gif" # use .png , .svg or .gif format
+  preloader = "" # use .png , .svg or .gif format
 
   # search
   [params.search]
@@ -156,7 +103,7 @@ copyright = "| copyright &copy; 2020 [Funsie Onesie](/) All Rights Reserved |"
 
 ############################ news letter ########################
 [params.newsletter]
-enable = false
+enable = true
 title = "Join Our Newsletter"
 content = "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero"
 
@@ -171,19 +118,24 @@ expire_days = 2
 [[params.social]]
 title = "facebook"
 icon = "ti-facebook" # themify icon : https://themify.me/themify-icons
-link = ""
+link = "#"
 
 [[params.social]]
 title = "twitter"
 icon = "ti-twitter-alt" # themify icon : https://themify.me/themify-icons
-link = ""
+link = "#"
 
 [[params.social]]
 title = "instagram"
 icon = "ti-instagram" # themify icon : https://themify.me/themify-icons
-link = ""
+link = "#"
+
+[[params.social]]
+title = "github"
+icon = "ti-github" # themify icon : https://themify.me/themify-icons
+link = "#"
 
 [[params.social]]
 title = "linkedin"
 icon = "ti-linkedin" # themify icon : https://themify.me/themify-icons
-link = ""
+link = "#"
