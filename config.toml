@@ -59,13 +59,13 @@ enableRobotsTXT = true
   weight = 3
 
   [[menu.main]]
-  name = "Onesies"
-  URL = "onesies"
+  name = "Music Gear"
+  URL = "music-gear"
   weight = 1
 
   [[menu.main]]
-  name = "All Onesies"
-  URL = "all-onesies"
+  name = "Best Mics"
+  URL = "best-mics"
   weight = 1
   parent = "Onesies"
 
